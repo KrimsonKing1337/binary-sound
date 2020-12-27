@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("./Rubik-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: bold;
+  src: url("./Rubik-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: italic;
+  src: url("./Rubik-Italic.ttf") format("ttf");
+}

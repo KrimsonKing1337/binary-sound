@@ -43,6 +43,7 @@ export default defineComponent({
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(91.04deg, #CD2EDB -2.91%, #2EDBB1 116.13%);
+  text-align: right;
 }
 
 .desc {
@@ -52,5 +53,6 @@ export default defineComponent({
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-top: 10px;
+  text-align: right;
 }
 </style>

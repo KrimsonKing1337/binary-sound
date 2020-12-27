@@ -72,12 +72,14 @@ export default defineComponent({
 
 .contacts {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 50px;
 }
 
 .link {
+  display: block;
   color: inherit;
   font: inherit;
   font-family: Rubik-Light;
@@ -90,6 +92,13 @@ export default defineComponent({
 
   &.is-text {
     text-decoration: underline;
+
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 33px;
+      text-align: center;
+    }
   }
 }
 

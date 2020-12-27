@@ -1,19 +1,23 @@
 <template>
   <div class="nav-component">
-    <div class="nav-item">
-      о нас
-    </div>
+    <div class="nav-burger" />
 
-    <div class="nav-item">
-      услуги
-    </div>
+    <div class="nav-items-wrapper">
+      <div class="nav-item">
+        о&nbsp;нас
+      </div>
 
-    <div class="nav-item">
-      портфолио
-    </div>
+      <div class="nav-item">
+        услуги
+      </div>
 
-    <div class="nav-item is-button">
-      связаться
+      <div class="nav-item">
+        портфолио
+      </div>
+
+      <div class="nav-item is-button">
+        связаться
+      </div>
     </div>
   </div>
 </template>
@@ -28,10 +32,27 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.nav-component {
+.nav-burger {
+  display: none;
+  width: 30px;
+  height: 24px;
+  margin-left: auto;
+  background: url("~@assets/icons/menu.svg") no-repeat center;
+  cursor: pointer;
+
+  @media screen and (max-width: 960px) {
+    display: block;
+  }
+}
+
+.nav-items-wrapper {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
 }
 
 .nav-item {

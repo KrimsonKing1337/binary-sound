@@ -36,6 +36,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .home-view {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
   width: 100%;
@@ -45,12 +46,18 @@ export default defineComponent({
 }
 
 .home-left {
+  max-width: 820px;
   flex-grow: 1;
   padding: 30px 140px 30px 70px;
+
+  @media screen and (max-width: 960px) {
+    padding: 30px;
+  }
 }
 
 .home-right {
-  width: 820px;
+  max-width: 820px;
+  margin-left: auto;
 }
 
 .image {

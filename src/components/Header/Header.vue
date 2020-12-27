@@ -28,5 +28,6 @@ export default defineComponent({
 .logo {
   width: 69px;
   height: 100px;
+  margin-right: 70px;
 }
 </style>

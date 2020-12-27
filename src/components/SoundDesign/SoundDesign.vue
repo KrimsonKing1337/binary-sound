@@ -28,6 +28,10 @@ export default defineComponent({
   flex-direction: column;
   align-items: flex-end;
   margin-top: 98px;
+
+  @media screen and (max-width: 960px) {
+    align-items: center;
+  }
 }
 
 .title {

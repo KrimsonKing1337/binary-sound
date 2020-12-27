@@ -67,18 +67,30 @@ export default defineComponent({
 }
 
 .cover {
-  height: 600px;
-  width: 820px;
+  width: 100%;
+  max-width: 820px;
+  max-height: 600px;
+
+  img {
+    width: 100%;
+  }
 }
 
 .control {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   border-top: 2px #888888 solid;
   border-bottom: 2px #888888 solid;
   width: 100%;
-  height: 150px;
+  min-height: 150px;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column-reverse;
+    border-top: 0;
+    padding-top: 20px;
+    padding-bottom: 43px;
+  }
 }
 
 .changer {
@@ -88,6 +100,11 @@ export default defineComponent({
   border-right: 2px #888888 solid;
   width: 329px;
   height: 100%;
+
+  @media screen and (max-width: 700px) {
+    border-right: 0;
+    margin-top: 31px;
+  }
 }
 
 .change-button {

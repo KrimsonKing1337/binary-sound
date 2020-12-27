@@ -62,6 +62,7 @@ export default defineComponent({
   font-family: Rubik;
   font-style: normal;
   font-weight: 300;
+  line-height: 19px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-top: 10px;

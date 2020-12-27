@@ -35,8 +35,7 @@ export default defineComponent({
 }
 
 .title {
-  font-family: Rubik;
-  font-weight: 500;
+  font-family: Rubik-Medium;
   font-size: 32px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -47,7 +46,7 @@ export default defineComponent({
 }
 
 .desc {
-  font-family: Rubik;
+  font-family: Rubik-Light;
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 0.1em;

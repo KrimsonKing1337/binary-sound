@@ -142,15 +142,13 @@ export default defineComponent({
 
 .artist-name {
   font-family: Rubik;
-  font-weight: 500;
   font-size: 32px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
 }
 
 .song-name {
-  font-family: Rubik;
-  font-weight: 300;
+  font-family: Rubik-Light;
   letter-spacing: 0.1em;
   color: #FFFFFF;
 }

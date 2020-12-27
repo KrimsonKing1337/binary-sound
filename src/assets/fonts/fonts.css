@@ -1,16 +1,20 @@
 @font-face {
   font-family: "Rubik";
-  src: url("./Rubik-Regular.ttf") format("ttf");
+  src: url("./Rubik-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Rubik";
-  font-weight: bold;
-  src: url("./Rubik-Bold.ttf") format("ttf");
+  font-family: "Rubik-Medium";
+  src: url("./Rubik-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Rubik";
-  font-style: italic;
-  src: url("./Rubik-Italic.ttf") format("ttf");
+  font-family: "Rubik-Light";
+  src: url("./Rubik-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }

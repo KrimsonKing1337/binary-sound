@@ -3,9 +3,6 @@
 </template>
 
 <style lang="scss">
-@import "~reset-css/reset.css";
-@import "./assets/fonts/fonts.css";
-
 html,
 body {
   width: 100%;

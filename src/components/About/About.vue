@@ -50,9 +50,7 @@ export default defineComponent({
 }
 
 .title {
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: 500;
+  font-family: Rubik-Medium;
   font-size: 32px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -63,7 +61,7 @@ export default defineComponent({
 }
 
 .desc {
-  font-family: Rubik;
+  font-family: Rubik-Light;
   font-style: normal;
   font-weight: 300;
   line-height: 19px;
@@ -82,6 +80,7 @@ export default defineComponent({
 .link {
   color: inherit;
   font: inherit;
+  font-family: Rubik-Light;
   text-decoration: none;
   margin-left: 40px;
 

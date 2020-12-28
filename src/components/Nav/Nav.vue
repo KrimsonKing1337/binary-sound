@@ -1,7 +1,5 @@
 <template>
   <div class="nav-component">
-    <div class="nav-burger" />
-
     <div class="nav-items-wrapper">
       <div class="nav-item">
         о&nbsp;нас
@@ -19,32 +17,49 @@
         связаться
       </div>
     </div>
+
+    <div class="nav-mobile" :class="{'is-open': menuIsOpen}">
+      <NavMobileHeader />
+
+      <div class="mobile-nav-items-wrapper">
+        <div class="nav-item">
+          о&nbsp;нас
+        </div>
+
+        <div class="nav-item">
+          услуги
+        </div>
+
+        <div class="nav-item">
+          портфолио
+        </div>
+
+        <div class="nav-item is-button">
+          связаться
+        </div>
+      </div>
+
+      <Contacts class="contacts" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { mapState } from 'vuex';
+import Contacts from '@/components/Contacts/Contacts.vue';
+import NavMobileHeader from '@/components/NavMobileHeader/NavMobileHeader.vue';
 
 export default defineComponent({
   name: 'Nav',
-
+  components: { NavMobileHeader, Contacts },
+  computed: {
+    ...mapState(['menuIsOpen']),
+  },
 });
 </script>
 
 <style scoped lang="scss">
-.nav-burger {
-  display: none;
-  width: 30px;
-  height: 24px;
-  margin-left: auto;
-  background: url("~@assets/icons/menu.svg") no-repeat center;
-  cursor: pointer;
-
-  @media screen and (max-width: 960px) {
-    display: block;
-  }
-}
-
 .nav-items-wrapper {
   display: flex;
   align-items: center;
@@ -53,6 +68,35 @@ export default defineComponent({
   @media screen and (max-width: 960px) {
     display: none;
   }
+}
+
+.nav-mobile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  background: #000;
+
+  &.is-open {
+    display: flex;
+  }
+}
+
+.mobile-nav-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 75px;
 }
 
 .nav-item {
@@ -74,5 +118,18 @@ export default defineComponent({
   &.is-button {
     background: linear-gradient(98.21deg, #CD2EDB 0%, #2EDBB1 116.34%);
   }
+
+  .mobile-nav-items-wrapper & {
+    margin-left: 0;
+    margin-top: 50px;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+}
+
+.contacts {
+  margin-top: 95px;
 }
 </style>

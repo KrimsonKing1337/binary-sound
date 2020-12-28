@@ -11,27 +11,17 @@
       оркестровых произведений и трогательных мелодий
     </div>
 
-    <div class="contacts">
-      <a href="#" class="link">
-        <div class="insta" />
-      </a>
-
-      <a href="#" class="link">
-        <div class="fb" />
-      </a>
-
-      <a href="mailto:binarysound.prod@gmail.com" class="link is-text">
-        binarysound.prod@gmail.com
-      </a>
-    </div>
+    <Contacts />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Contacts from '@/components/Contacts/Contacts.vue';
 
 export default defineComponent({
   name: 'Player',
+  components: { Contacts },
 });
 </script>
 
@@ -68,57 +58,5 @@ export default defineComponent({
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-top: 10px;
-}
-
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.link {
-  display: block;
-  color: inherit;
-  font: inherit;
-  font-family: Rubik-Light;
-  text-decoration: none;
-  margin-left: 40px;
-
-  &:nth-child(1) {
-    margin-left: 0;
-  }
-
-  &.is-text {
-    text-decoration: underline;
-
-    @media screen and (max-width: 700px) {
-      width: 100%;
-      margin-left: 0;
-      margin-top: 33px;
-      text-align: center;
-    }
-  }
-}
-
-.insta {
-  width: 32px;
-  height: 32px;
-  background: url("~@assets/icons/insta.svg") no-repeat center;
-
-  &:hover {
-    background-image: url("~@assets/icons/insta-hover.svg");
-  }
-}
-
-.fb {
-  width: 30px;
-  height: 32px;
-  background: url("~@assets/icons/fb.svg") no-repeat center;
-
-  &:hover {
-    background-image: url("~@assets/icons/fb-hover.svg");
-  }
 }
 </style>

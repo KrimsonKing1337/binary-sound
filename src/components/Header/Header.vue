@@ -1,8 +1,6 @@
 <template>
   <div class="header-component">
-    <div class="logo">
-      <img src="@assets/img/logo.svg" alt />
-    </div>
+    <NavMobileHeader />
 
     <Nav class="nav" />
   </div>
@@ -11,10 +9,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Nav from '@/components/Nav/Nav.vue';
+import NavMobileHeader from '@/components/NavMobileHeader/NavMobileHeader.vue';
 
 export default defineComponent({
   name: 'Header',
-  components: { Nav },
+  components: { NavMobileHeader, Nav },
 });
 </script>
 

@@ -122,6 +122,7 @@ export default defineComponent({
       this.activeSongTrackWidth = 0;
       this.activeIndex = activeIndex;
       this.activeAudioElement = await this.waitForActiveAudioLoaded();
+      this.activeSongDuration = this.getHumanTimeOfActiveSongFromSeconds();
     },
     play() {
       this.timeUpdateListener = this.activeAudioElement.addEventListener('timeupdate', () => {

@@ -1,8 +1,6 @@
 <template>
   <div class="player-component">
-    <div class="cover">
-      <img src="@assets/img/cover-default.jpg" alt />
-    </div>
+    <div class="cover" :style="`background-image: url('${getActiveCover()}')`" />
 
     <div class="control">
       <div class="changer">
@@ -49,20 +47,24 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+/* eslint-disable */
+const activeSongCoverDefault = require('@assets/img/cover-default.jpg');
+
 const songs = [
   {
     artist: 'Реклама',
     name: 'Just Do It',
-    // eslint-disable-next-line global-require
     src: require('@assets/static/examples/Реклама Just Do It.mp3'),
+    img: require('@assets/static/examples/IMG_1646.jpg'),
   },
   {
     artist: 'Реклама',
     name: 'DeLorean Blues.mp3',
-    // eslint-disable-next-line global-require
     src: require('@assets/static/examples/Реклама - DeLorean Blues.mp3'),
+    img: require('@assets/static/examples/IMG_1647.jpg'),
   },
 ];
+/* eslint-enable */
 
 export default defineComponent({
   name: 'Player',
@@ -71,6 +73,8 @@ export default defineComponent({
       isPaused: true,
       songs,
       activeIndex: 0,
+      activeSongCover: '',
+      activeSongCoverDefault,
       activeSongDuration: 0,
       activeSongTrackWidth: 0,
       activeAudioElement: null,
@@ -78,6 +82,13 @@ export default defineComponent({
     };
   },
   methods: {
+    getActiveCover() {
+      const activeSong = this.songs[this.activeIndex];
+
+      const { img } = activeSong;
+
+      return img || this.activeSongCoverDefault;
+    },
     getActiveAudioElement() {
       const activeSongElement = document.querySelectorAll('.song')[this.activeIndex];
 
@@ -170,11 +181,10 @@ export default defineComponent({
 .cover {
   width: 100%;
   max-width: 820px;
-  max-height: 600px;
-
-  img {
-    width: 100%;
-  }
+  height: 600px;
+  overflow: hidden;
+  background: no-repeat center;
+  background-size: cover;
 }
 
 .control {

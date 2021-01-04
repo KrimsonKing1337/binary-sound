@@ -6,18 +6,25 @@
 
     <div class="control">
       <div class="changer">
-        <div class="change-button prev" />
+        <div class="change-button prev" @click="prevClickHandler" />
 
-        <div class="change-button next" />
+        <div class="change-button next" @click="nextClickHandler" />
       </div>
 
-      <div class="song">
+      <div
+        v-for="(songCur, index) in songs"
+        :key="index"
+        class="song"
+        :class="{'is-active': activeIndex === index}"
+      >
+        <audio :src="songCur.src" class="audio" controls />
+
         <div class="artist-name">
-          SOUND DESIGN
+          {{ songCur.artist }}
         </div>
 
         <div class="song-name">
-          Atmos & Drones (OST Posi+ive)
+          {{ songCur.name }}
         </div>
 
         <div class="song-control">
@@ -27,11 +34,11 @@
           </div>
 
           <div class="track-wrapper">
-            <div class="track" />
+            <div class="track" :style="`width: ${activeSongTrackWidth}%`" />
           </div>
 
           <div class="time">
-            1:33
+            {{ activeSongDuration }}
           </div>
         </div>
       </div>
@@ -42,17 +49,111 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+const songs = [
+  {
+    artist: 'Реклама',
+    name: 'Just Do It',
+    // eslint-disable-next-line global-require
+    src: require('@assets/static/examples/Реклама Just Do It.mp3'),
+  },
+  {
+    artist: 'Реклама',
+    name: 'DeLorean Blues.mp3',
+    // eslint-disable-next-line global-require
+    src: require('@assets/static/examples/Реклама - DeLorean Blues.mp3'),
+  },
+];
+
 export default defineComponent({
   name: 'Player',
   data() {
     return {
       isPaused: true,
+      songs,
+      activeIndex: 0,
+      activeSongDuration: 0,
+      activeSongTrackWidth: 0,
+      activeAudioElement: null,
+      timeUpdateListener: null,
     };
   },
   methods: {
+    getActiveAudioElement() {
+      const activeSongElement = document.querySelectorAll('.song')[this.activeIndex];
+
+      return activeSongElement.querySelector('audio');
+    },
+    getHumanTimeOfActiveSongFromSeconds() {
+      const activeAudioElement = this.getActiveAudioElement();
+      const secs = activeAudioElement.duration;
+
+      return new Date(secs * 1000).toISOString().substr(14, 5);
+    },
+    waitForActiveAudioLoaded() {
+      return new Promise((resolve) => {
+        const activeAudioElement = this.getActiveAudioElement();
+
+        if (activeAudioElement.readyState !== 0) {
+          resolve(activeAudioElement);
+
+          return;
+        }
+
+        activeAudioElement.addEventListener('canplaythrough', () => {
+          resolve(activeAudioElement);
+        }, { once: true });
+      });
+    },
+    async resetStateOfPlayer(activeIndex) {
+      this.pause();
+      this.isPaused = true;
+      this.activeAudioElement.currentTime = 0;
+      this.activeSongTrackWidth = 0;
+      this.activeIndex = activeIndex;
+      this.activeAudioElement = await this.waitForActiveAudioLoaded();
+    },
+    play() {
+      this.timeUpdateListener = this.activeAudioElement.addEventListener('timeupdate', () => {
+        const { currentTime, duration } = this.activeAudioElement;
+
+        this.activeSongTrackWidth = (duration / 100) * currentTime;
+      });
+
+      this.activeAudioElement.play();
+    },
+    pause() {
+      this.activeAudioElement.pause();
+
+      this.activeAudioElement.removeEventListener('timeupdate', this.timeUpdateListener);
+    },
+
     playPauseClickHandler() {
+      if (this.isPaused) {
+        this.play();
+      } else {
+        this.pause();
+      }
+
       this.isPaused = !this.isPaused;
     },
+    prevClickHandler() {
+      if (this.activeIndex === 0) {
+        return;
+      }
+
+      this.resetStateOfPlayer(this.activeIndex - 1);
+    },
+    nextClickHandler() {
+      if (this.activeIndex === this.songs.length - 1) {
+        return;
+      }
+
+      this.resetStateOfPlayer(this.activeIndex + 1);
+    },
+  },
+  async mounted() {
+    this.activeAudioElement = await this.waitForActiveAudioLoaded();
+    this.activeSongDuration = this.getHumanTimeOfActiveSongFromSeconds();
   },
 });
 </script>
@@ -132,12 +233,16 @@ export default defineComponent({
 }
 
 .song {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
   flex-grow: 1;
+
+  &.is-active {
+    display: flex;
+  }
 }
 
 .artist-name {
@@ -169,7 +274,7 @@ export default defineComponent({
 
 .track {
   background: linear-gradient(98.21deg, #CD2EDB 0%, #2EDBB1 116.34%);
-  width: 50%;
+  width: 100%;
   height: 100%;
 }
 
@@ -203,5 +308,9 @@ export default defineComponent({
   &:hover {
     background-image: url("~@assets/icons/pause-hover.svg");
   }
+}
+
+.audio {
+  display: none;
 }
 </style>

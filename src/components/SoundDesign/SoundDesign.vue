@@ -1,6 +1,6 @@
 <template>
   <div class="sound-design-component">
-    <video class="video-bg" src="@assets/video-bg.mp4" autoplay muted loop />
+    <video class="video-bg" src="@assets/static/video-bg.mp4" autoplay muted loop />
 
     <div class="wrapper">
       <div class="title">

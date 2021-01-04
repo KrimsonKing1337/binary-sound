@@ -32,7 +32,7 @@ export default defineComponent({
   align-items: center;
   justify-content: space-between;
   background: #181818;
-  padding: 29px 79px 60px 74px;
+  padding: 30px 79px 60px 74px;
 
   @media screen and (max-width: 960px) {
     padding: 30px;

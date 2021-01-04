@@ -4,6 +4,10 @@
       <img src="@assets/img/logo.svg" alt />
     </div>
 
+    <div class="logo-mobile">
+      <img src="@assets/img/logo-mobile.svg" alt />
+    </div>
+
     <div class="nav-burger" @click="navBurgerClickHandler" />
   </div>
 </template>
@@ -33,6 +37,20 @@ export default defineComponent({
   width: 69px;
   height: 100px;
   margin-right: 70px;
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+}
+
+.logo-mobile {
+  display: none;
+  width: 113px;
+  height: 55px;
+
+  @media screen and (max-width: 960px) {
+    display: block;
+  }
 }
 
 .nav-burger {

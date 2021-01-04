@@ -22,6 +22,12 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #000;
+  padding: 30px 140px 30px 70px;
+
+  @media screen and (max-width: 960px) {
+    padding: 30px;
+  }
 }
 
 .logo {

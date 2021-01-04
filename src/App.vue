@@ -16,7 +16,7 @@ body {
 
 #app {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   color: #fff;
 
   -webkit-font-smoothing: antialiased;

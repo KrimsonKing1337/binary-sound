@@ -1,15 +1,19 @@
 <template>
   <div class="sound-design-component">
-    <div class="title">
-      Саунд-дизайн
-      <br />
-      и музыка
-    </div>
+    <video class="video-bg" src="@assets/video-bg.mp4" autoplay muted loop />
 
-    <div class="desc">
-      для рекламы, трейлеров,
-      <br />
-      кино и видеоигр
+    <div class="wrapper">
+      <div class="title">
+        Саунд-дизайн
+        <br />
+        и музыка
+      </div>
+
+      <div class="desc">
+        для рекламы, трейлеров,
+        <br />
+        кино и видеоигр
+      </div>
     </div>
   </div>
 </template>
@@ -24,13 +28,43 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .sound-design-component {
+  height: 880px;
+
+  @media screen and (max-width: 960px) {
+    height: 545px;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  top: 248px;
+  right: 0;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-top: 98px;
+  width: 100%;
+  padding: 0 140px 0 70px;
 
   @media screen and (max-width: 960px) {
+    top: auto;
+    bottom: 0;
     align-items: center;
+    padding: 0 30px;
+  }
+}
+
+.video-bg {
+  position: absolute;
+  z-index: 1;
+  top: 150px;
+  left: 0;
+  object-fit: cover;
+
+  @media screen and (max-width: 960px) {
+    top: 115px;
+    width: 100%;
+    height: 100%;
   }
 }
 

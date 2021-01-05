@@ -75,10 +75,10 @@ export default defineComponent({
       activeIndex: 0,
       activeSongCover: '',
       activeSongCoverDefault,
-      activeSongDuration: 0,
+      activeSongDuration: '0',
       activeSongTrackWidth: 0,
-      activeAudioElement: null,
-      timeUpdateListener: null,
+      activeAudioElement: document.querySelector('audio') as HTMLAudioElement,
+      timeUpdateListener: null as any,
     };
   },
   methods: {
@@ -89,18 +89,18 @@ export default defineComponent({
 
       return img || this.activeSongCoverDefault;
     },
-    getActiveAudioElement() {
+    getActiveAudioElement(): HTMLAudioElement {
       const activeSongElement = document.querySelectorAll('.song')[this.activeIndex];
 
-      return activeSongElement.querySelector('audio');
+      return activeSongElement.querySelector('audio') as HTMLAudioElement;
     },
-    getHumanTimeOfActiveSongFromSeconds() {
+    getHumanTimeOfActiveSongFromSeconds(): string {
       const activeAudioElement = this.getActiveAudioElement();
       const secs = activeAudioElement.duration;
 
       return new Date(secs * 1000).toISOString().substr(14, 5);
     },
-    waitForActiveAudioLoaded() {
+    waitForActiveAudioLoaded(): Promise<HTMLAudioElement> {
       return new Promise((resolve) => {
         const activeAudioElement = this.getActiveAudioElement();
 
@@ -115,7 +115,7 @@ export default defineComponent({
         }, { once: true });
       });
     },
-    async resetStateOfPlayer(activeIndex) {
+    async resetStateOfPlayer(activeIndex: number) {
       this.pause();
       this.isPaused = true;
       this.activeAudioElement.currentTime = 0;

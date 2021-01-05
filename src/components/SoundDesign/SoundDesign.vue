@@ -50,7 +50,8 @@ export default defineComponent({
     top: auto;
     bottom: 0;
     align-items: center;
-    padding: 0 30px;
+    padding: 40px 44px 56px 30px;
+    background: #000;
   }
 }
 

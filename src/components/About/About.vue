@@ -58,5 +58,9 @@ export default defineComponent({
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-top: 10px;
+
+  @media screen and (max-width: 1600px) {
+    max-width: 667px;
+  }
 }
 </style>

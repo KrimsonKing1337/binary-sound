@@ -186,6 +186,11 @@ export default defineComponent({
   overflow: hidden;
   background: no-repeat center;
   background-size: cover;
+
+  @media screen and (max-width: 1600px) {
+    max-width: none;
+    height: 878px;
+  }
 }
 
 .control {
@@ -197,7 +202,7 @@ export default defineComponent({
   width: 100%;
   min-height: 150px;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1600px) {
     flex-direction: column-reverse;
     border-top: 0;
     padding-top: 20px;
@@ -213,7 +218,7 @@ export default defineComponent({
   width: 329px;
   height: 100%;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1600px) {
     border-right: 0;
     margin-top: 31px;
   }

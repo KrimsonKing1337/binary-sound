@@ -54,12 +54,14 @@ export default defineComponent({
 }
 
 .home-right {
+  width: 100%;
   max-width: 820px;
   margin-left: auto;
   z-index: 15;
 
-  @media screen and (max-width: 960px) {
-    margin-top: 55px;
+  @media screen and (max-width: 1600px) {
+    max-width: none;
+    margin-left: 0;
   }
 }
 

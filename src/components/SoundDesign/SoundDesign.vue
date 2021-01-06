@@ -28,11 +28,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .sound-design-component {
-  height: 880px;
-
-  @media screen and (max-width: 960px) {
-    height: 545px;
-  }
+  flex-grow: 1;
 }
 
 .wrapper {
@@ -47,8 +43,7 @@ export default defineComponent({
   padding: 0 140px 0 70px;
 
   @media screen and (max-width: 960px) {
-    top: auto;
-    bottom: 0;
+    position: static;
     align-items: center;
     padding: 40px 44px 56px 30px;
     background: #000;
@@ -56,16 +51,12 @@ export default defineComponent({
 }
 
 .video-bg {
-  position: absolute;
-  z-index: 1;
-  top: 150px;
-  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 
   @media screen and (max-width: 960px) {
-    top: 115px;
-    width: 100%;
-    height: 100%;
+    height: auto;
   }
 }
 

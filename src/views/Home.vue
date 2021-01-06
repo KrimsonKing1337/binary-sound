@@ -55,6 +55,8 @@ export default defineComponent({
 }
 
 .home-right {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 820px;
   margin-left: auto;

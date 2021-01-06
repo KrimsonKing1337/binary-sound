@@ -31,6 +31,7 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  flex-grow: 1;
   background: #181818;
   padding: 30px 79px 60px 74px;
 

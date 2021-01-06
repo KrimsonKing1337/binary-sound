@@ -18,6 +18,7 @@ body {
   width: 100%;
   min-height: 100%;
   color: #fff;
+  background: #000;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

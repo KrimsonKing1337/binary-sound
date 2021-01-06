@@ -54,13 +54,13 @@ const songs = [
   {
     artist: 'Реклама',
     name: 'Just Do It',
-    src: require('@assets/static/examples/Реклама Just Do It.mp3'),
+    src: require('@assets/static/examples/Just_Do_It.mp3'),
     img: require('@assets/static/examples/IMG_1646.jpg'),
   },
   {
     artist: 'Реклама',
     name: 'DeLorean Blues.mp3',
-    src: require('@assets/static/examples/Реклама - DeLorean Blues.mp3'),
+    src: require('@assets/static/examples/DeLorean_Blues.mp3'),
     img: require('@assets/static/examples/IMG_1647.jpg'),
   },
 ];

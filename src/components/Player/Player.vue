@@ -190,6 +190,10 @@ export default defineComponent({
     height: 878px;
   }
 
+  @media screen and (max-width: 960px) {
+    height: 274px;
+  }
+
   @media screen and (min-width: 2560px) {
     height: 800px;
   }

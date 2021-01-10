@@ -59,6 +59,13 @@ export default defineComponent({
   &.is-text {
     text-decoration: underline;
 
+    @media screen and (max-width: 1600px) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 33px;
+      text-align: center;
+    }
+
     @media screen and (max-width: 700px) {
       width: 100%;
       margin-left: 0;

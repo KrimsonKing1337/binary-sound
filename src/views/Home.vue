@@ -52,6 +52,18 @@ export default defineComponent({
   flex-direction: column;
   position: relative;
   flex-grow: 1;
+  max-height: 100vh;
+  overflow: hidden;
+
+  @media screen and (max-width: 1600px) {
+    min-height: 1024px;
+  }
+
+  @media screen and (max-width: 960px) {
+    min-height: auto;
+    flex-grow: 0;
+    max-height: none;
+  }
 }
 
 .home-right {

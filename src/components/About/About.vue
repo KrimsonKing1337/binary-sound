@@ -48,6 +48,10 @@ export default defineComponent({
     padding: 30px;
   }
 
+  @media screen and (max-width: 1600px) {
+    padding: 30px 79px 30px 74px;
+  }
+
   @media screen and (min-width: 2560px) {
     padding: 0 98px 0 105px;
   }
@@ -116,6 +120,10 @@ export default defineComponent({
 
 .contacts {
   align-self: flex-start;
+
+  @media screen and (max-width: 1600px) {
+    align-self: center;
+  }
 
   @media screen and (min-width: 2560px) {
     margin-top: 56px;

@@ -1,17 +1,17 @@
 <template>
   <div class="nav-component">
     <div class="nav-items-wrapper">
-      <div class="nav-item">
+      <a href="https://www.binary-sound.com/about" class="nav-item">
         о&nbsp;нас
-      </div>
+      </a>
 
-      <div class="nav-item">
+      <a href="https://www.binary-sound.com/uslugi" class="nav-item">
         услуги
-      </div>
+      </a>
 
-      <div class="nav-item">
+      <a href="https://www.binary-sound.com/portfolio" class="nav-item">
         портфолио
-      </div>
+      </a>
 
       <div class="nav-item is-button">
         связаться
@@ -22,17 +22,17 @@
       <NavMobileHeader />
 
       <div class="mobile-nav-items-wrapper">
-        <div class="nav-item">
+        <a href="https://www.binary-sound.com/about" class="nav-item">
           о&nbsp;нас
-        </div>
+        </a>
 
-        <div class="nav-item">
+        <a href="https://www.binary-sound.com/uslugi" class="nav-item">
           услуги
-        </div>
+        </a>
 
-        <div class="nav-item">
+        <a href="https://www.binary-sound.com/portfolio" class="nav-item">
           портфолио
-        </div>
+        </a>
 
         <div class="nav-item is-button">
           связаться
@@ -114,6 +114,7 @@ export default defineComponent({
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-left: 70px;
+  text-decoration: none;
   cursor: pointer;
 
   &:nth-child(1) {

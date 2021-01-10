@@ -70,6 +70,10 @@ export default defineComponent({
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(91.04deg, #CD2EDB -2.91%, #2EDBB1 116.13%);
   text-align: right;
+
+  @media screen and (min-width: 3840px) {
+    font-size: 64px;
+  }
 }
 
 .desc {
@@ -80,5 +84,9 @@ export default defineComponent({
   color: #FFFFFF;
   margin-top: 10px;
   text-align: right;
+
+  @media screen and (min-width: 3840px) {
+    font-size: 40px;
+  }
 }
 </style>

@@ -36,10 +36,18 @@ export default defineComponent({
 .logo {
   width: 69px;
   height: 100px;
-  margin-right: 70px;
+
+  img {
+    width: 100%;
+  }
 
   @media screen and (max-width: 960px) {
     display: none;
+  }
+
+  @media screen and (min-width: 3840px) {
+    width: 138px;
+    height: 201px;
   }
 }
 

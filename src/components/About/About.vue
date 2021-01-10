@@ -1,17 +1,19 @@
 <template>
   <div class="about-component">
-    <div class="title">
-      Binary sound
-    </div>
+    <div class="wrapper">
+      <div class="title">
+        Binary sound
+      </div>
 
-    <div class="desc">
-      Бутик-студия аудио-продакшна полного цикла, основанная двумя талантливыми музыкантами с непохожим бэкграундом и
-      сильным набором профессиональных навыков. Именно эта разносторонность
-      и богатый музыкальный опыт позволяют нам уверенно и слаженно работать над любыми проектами и задачами: от эпичных
-      оркестровых произведений и трогательных мелодий
-    </div>
+      <div class="desc">
+        Бутик-студия аудио-продакшна полного цикла, основанная двумя талантливыми музыкантами с непохожим бэкграундом и
+        сильным набором профессиональных навыков. Именно эта разносторонность
+        и богатый музыкальный опыт позволяют нам уверенно и слаженно работать над любыми проектами и задачами: от
+        эпичных оркестровых произведений и трогательных мелодий
+      </div>
 
-    <Contacts />
+      <Contacts class="contacts" />
+    </div>
   </div>
 </template>
 
@@ -28,15 +30,26 @@ export default defineComponent({
 <style scoped lang="scss">
 .about-component {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #181818;
+  flex-grow: 1;
+}
+
+.wrapper {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   flex-grow: 1;
-  background: #181818;
-  padding: 30px 79px 60px 74px;
+  padding: 0 79px 0 74px;
 
   @media screen and (max-width: 960px) {
     padding: 30px;
+  }
+
+  @media screen and (min-width: 3840px) {
+    padding: 0 158px 0 148px;
   }
 }
 
@@ -49,19 +62,37 @@ export default defineComponent({
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(91.04deg, #CD2EDB -2.91%, #2EDBB1 116.13%);
+
+  @media screen and (min-width: 3840px) {
+    font-size: 64px;
+  }
 }
 
 .desc {
   font-family: Rubik-Light;
+  font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  line-height: 19px;
+  line-height: 1.2;
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-top: 10px;
 
   @media screen and (max-width: 1600px) {
     max-width: 667px;
+  }
+
+  @media screen and (min-width: 3840px) {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+}
+
+.contacts {
+  align-self: flex-start;
+
+  @media screen and (min-width: 3840px) {
+    margin-top: 84px;
   }
 }
 </style>

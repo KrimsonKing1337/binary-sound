@@ -106,6 +106,7 @@ export default defineComponent({
   padding: 0 9px;
   height: 41px;
   font-family: Rubik;
+  font-size: 16px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-left: 70px;
@@ -126,6 +127,11 @@ export default defineComponent({
     &:nth-child(1) {
       margin-top: 0;
     }
+  }
+
+  @media screen and (min-width: 3840px) {
+    font-size: 32px;
+    height: 82px;
   }
 }
 

@@ -38,7 +38,7 @@ export default defineComponent({
   display: flex;
   align-items: stretch;
   width: 100%;
-  max-width: 1920px;
+  min-height: 100vh;
   margin: 0 auto;
   background: #000;
 
@@ -65,6 +65,10 @@ export default defineComponent({
   @media screen and (max-width: 1600px) {
     max-width: none;
     margin-left: 0;
+  }
+
+  @media screen and (min-width: 3840px) {
+    max-width: 1640px;
   }
 }
 

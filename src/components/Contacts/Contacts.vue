@@ -29,6 +29,11 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+  font-size: 16px;
+
+  @media screen and (min-width: 3840px) {
+    font-size: 32px;
+  }
 }
 
 .link {
@@ -53,15 +58,25 @@ export default defineComponent({
       text-align: center;
     }
   }
+
+  @media screen and (min-width: 3840px) {
+    margin-left: 80px;
+  }
 }
 
 .insta {
   width: 32px;
   height: 32px;
   background: url("~@assets/icons/insta.svg") no-repeat center;
+  background-size: cover;
 
   &:hover {
     background-image: url("~@assets/icons/insta-hover.svg");
+  }
+
+  @media screen and (min-width: 3840px) {
+    width: 64px;
+    height: 64px;
   }
 }
 
@@ -69,9 +84,15 @@ export default defineComponent({
   width: 30px;
   height: 32px;
   background: url("~@assets/icons/fb.svg") no-repeat center;
+  background-size: cover;
 
   &:hover {
     background-image: url("~@assets/icons/fb-hover.svg");
+  }
+
+  @media screen and (min-width: 3840px) {
+    width: 60px;
+    height: 64px;
   }
 }
 </style>

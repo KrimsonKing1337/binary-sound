@@ -181,15 +181,17 @@ export default defineComponent({
 
 .cover {
   width: 100%;
-  max-width: 820px;
   height: 600px;
   overflow: hidden;
   background: no-repeat center;
   background-size: cover;
 
   @media screen and (max-width: 1600px) {
-    max-width: none;
     height: 878px;
+  }
+
+  @media screen and (min-width: 3840px) {
+    height: 1200px;
   }
 }
 
@@ -208,6 +210,10 @@ export default defineComponent({
     padding-top: 20px;
     padding-bottom: 43px;
   }
+
+  @media screen and (min-width: 3840px) {
+    min-height: 300px;
+  }
 }
 
 .changer {
@@ -222,6 +228,10 @@ export default defineComponent({
     border-right: 0;
     margin-top: 31px;
   }
+
+  @media screen and (min-width: 3840px) {
+    width: 658px;
+  }
 }
 
 .change-button {
@@ -233,6 +243,7 @@ export default defineComponent({
   border-radius: 50%;
   margin-left: 61px;
   background: url("~@assets/icons/arrow.svg") no-repeat center;
+  background-size: cover;
   cursor: pointer;
 
   &:hover {
@@ -245,6 +256,11 @@ export default defineComponent({
 
   &.prev {
     transform: rotate(-180deg);
+  }
+
+  @media screen and (min-width: 3840px) {
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -266,12 +282,21 @@ export default defineComponent({
   font-size: 32px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+
+  @media screen and (min-width: 3840px) {
+    font-size: 64px;
+  }
 }
 
 .song-name {
   font-family: Rubik-Light;
+  font-size: 16px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+
+  @media screen and (min-width: 3840px) {
+    font-size: 32px;
+  }
 }
 
 .song-control {
@@ -280,6 +305,10 @@ export default defineComponent({
   justify-content: flex-start;
   margin-top: 15px;
   width: 270px;
+
+  @media screen and (min-width: 3840px) {
+    width: 540px;
+  }
 }
 
 .track-wrapper {
@@ -287,6 +316,11 @@ export default defineComponent({
   width: 100%;
   height: 2px;
   background: #D9D9D9;
+
+  @media screen and (min-width: 3840px) {
+    margin-left: 24px;
+    height: 4px;
+  }
 }
 
 .track {
@@ -303,16 +337,26 @@ export default defineComponent({
   color: #FFFFFF;
   margin-left: 12px;
   transform: translateY(13px);
+
+  @media screen and (min-width: 3840px) {
+    font-size: 24px;
+  }
 }
 
 .play {
   width: 12px;
   height: 9px;
   background: url("~@assets/icons/play.svg") no-repeat center;
+  background-size: contain;
   cursor: pointer;
 
   &:hover {
     background-image: url("~@assets/icons/play-hover.svg");
+  }
+
+  @media screen and (min-width: 3840px) {
+    width: 18px;
+    height: 24px;
   }
 }
 
@@ -320,10 +364,16 @@ export default defineComponent({
   width: 12px;
   height: 9px;
   background: url("~@assets/icons/pause.svg") no-repeat center;
+  background-size: contain;
   cursor: pointer;
 
   &:hover {
     background-image: url("~@assets/icons/pause-hover.svg");
+  }
+
+  @media screen and (min-width: 3840px) {
+    width: 18px;
+    height: 24px;
   }
 }
 

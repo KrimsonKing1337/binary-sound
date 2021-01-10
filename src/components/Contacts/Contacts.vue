@@ -31,6 +31,10 @@ export default defineComponent({
   margin-top: 50px;
   font-size: 16px;
 
+  @media screen and (min-width: 2560px) {
+    font-size: 20px;
+  }
+
   @media screen and (min-width: 3840px) {
     font-size: 32px;
   }
@@ -59,6 +63,10 @@ export default defineComponent({
     }
   }
 
+  @media screen and (min-width: 2560px) {
+    margin-left: 60px;
+  }
+
   @media screen and (min-width: 3840px) {
     margin-left: 80px;
   }
@@ -72,6 +80,11 @@ export default defineComponent({
 
   &:hover {
     background-image: url("~@assets/icons/insta-hover.svg");
+  }
+
+  @media screen and (min-width: 2560px) {
+    width: 43px;
+    height: 43px;
   }
 
   @media screen and (min-width: 3840px) {
@@ -88,6 +101,11 @@ export default defineComponent({
 
   &:hover {
     background-image: url("~@assets/icons/fb-hover.svg");
+  }
+
+  @media screen and (min-width: 2560px) {
+    width: 39px;
+    height: 43px;
   }
 
   @media screen and (min-width: 3840px) {

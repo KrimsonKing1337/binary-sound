@@ -40,7 +40,15 @@ export default defineComponent({
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
-  padding: 0 140px 0 70px;
+  padding: 0 140px;
+
+  @media screen and (min-width: 2560px) {
+    padding: 0 187px;
+  }
+
+  @media screen and (min-width: 3840px) {
+    padding: 0 280px;
+  }
 
   @media screen and (max-width: 960px) {
     position: static;
@@ -71,7 +79,7 @@ export default defineComponent({
   background-image: linear-gradient(91.04deg, #CD2EDB -2.91%, #2EDBB1 116.13%);
   text-align: right;
 
-  @media screen and (min-width: 3840px) {
+  @media screen and (min-width: 2560px) {
     font-size: 64px;
   }
 }
@@ -85,7 +93,7 @@ export default defineComponent({
   margin-top: 10px;
   text-align: right;
 
-  @media screen and (min-width: 3840px) {
+  @media screen and (min-width: 2560px) {
     font-size: 40px;
   }
 }

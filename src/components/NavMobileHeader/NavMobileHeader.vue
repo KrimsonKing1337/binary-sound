@@ -31,23 +31,32 @@ export default defineComponent({
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @media screen and (min-width: 2560px) {
+    width: auto;
+  }
 }
 
 .logo {
   width: 69px;
   height: 100px;
 
-  img {
-    width: 100%;
-  }
-
   @media screen and (max-width: 960px) {
     display: none;
+  }
+
+  @media screen and (min-width: 2560px) {
+    width: 92px;
+    height: 134px;
   }
 
   @media screen and (min-width: 3840px) {
     width: 138px;
     height: 201px;
+  }
+
+  img {
+    width: 100%;
   }
 }
 

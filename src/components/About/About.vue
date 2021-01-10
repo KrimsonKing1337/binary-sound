@@ -48,6 +48,10 @@ export default defineComponent({
     padding: 30px;
   }
 
+  @media screen and (min-width: 2560px) {
+    padding: 0 98px 0 105px;
+  }
+
   @media screen and (min-width: 3840px) {
     padding: 0 158px 0 148px;
   }
@@ -62,6 +66,10 @@ export default defineComponent({
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(91.04deg, #CD2EDB -2.91%, #2EDBB1 116.13%);
+
+  @media screen and (min-width: 2560px) {
+    font-size: 40px;
+  }
 
   @media screen and (min-width: 3840px) {
     font-size: 64px;
@@ -82,6 +90,11 @@ export default defineComponent({
     max-width: 667px;
   }
 
+  @media screen and (min-width: 2560px) {
+    font-size: 18px;
+    margin-top: 13px;
+  }
+
   @media screen and (min-width: 3840px) {
     font-size: 32px;
     margin-top: 20px;
@@ -90,6 +103,10 @@ export default defineComponent({
 
 .contacts {
   align-self: flex-start;
+
+  @media screen and (min-width: 2560px) {
+    margin-top: 56px;
+  }
 
   @media screen and (min-width: 3840px) {
     margin-top: 84px;

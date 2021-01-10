@@ -190,6 +190,10 @@ export default defineComponent({
     height: 878px;
   }
 
+  @media screen and (min-width: 2560px) {
+    height: 800px;
+  }
+
   @media screen and (min-width: 3840px) {
     height: 1200px;
   }
@@ -211,6 +215,10 @@ export default defineComponent({
     padding-bottom: 43px;
   }
 
+  @media screen and (min-width: 2560px) {
+    min-height: 200px;
+  }
+
   @media screen and (min-width: 3840px) {
     min-height: 300px;
   }
@@ -229,6 +237,10 @@ export default defineComponent({
     margin-top: 31px;
   }
 
+  @media screen and (min-width: 2560px) {
+    width: 438px;
+  }
+
   @media screen and (min-width: 3840px) {
     width: 658px;
   }
@@ -241,7 +253,7 @@ export default defineComponent({
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin-left: 61px;
+  margin-left: 60px;
   background: url("~@assets/icons/arrow.svg") no-repeat center;
   background-size: cover;
   cursor: pointer;
@@ -258,9 +270,16 @@ export default defineComponent({
     transform: rotate(-180deg);
   }
 
+  @media screen and (min-width: 2560px) {
+    width: 80px;
+    height: 80px;
+    margin-left: 80px;
+  }
+
   @media screen and (min-width: 3840px) {
     width: 120px;
     height: 120px;
+    margin-left: 120px;
   }
 }
 
@@ -283,6 +302,10 @@ export default defineComponent({
   letter-spacing: 0.1em;
   color: #FFFFFF;
 
+  @media screen and (min-width: 2560px) {
+    font-size: 40px;
+  }
+
   @media screen and (min-width: 3840px) {
     font-size: 64px;
   }
@@ -293,6 +316,10 @@ export default defineComponent({
   font-size: 16px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+
+  @media screen and (min-width: 2560px) {
+    font-size: 18px;
+  }
 
   @media screen and (min-width: 3840px) {
     font-size: 32px;
@@ -305,6 +332,10 @@ export default defineComponent({
   justify-content: flex-start;
   margin-top: 15px;
   width: 270px;
+
+  @media screen and (min-width: 2560px) {
+    width: 360px;
+  }
 
   @media screen and (min-width: 3840px) {
     width: 540px;
@@ -338,6 +369,10 @@ export default defineComponent({
   margin-left: 12px;
   transform: translateY(13px);
 
+  @media screen and (min-width: 2560px) {
+    font-size: 16px;
+  }
+
   @media screen and (min-width: 3840px) {
     font-size: 24px;
   }
@@ -352,6 +387,11 @@ export default defineComponent({
 
   &:hover {
     background-image: url("~@assets/icons/play-hover.svg");
+  }
+
+  @media screen and (min-width: 2560px) {
+    width: 12px;
+    height: 16px;
   }
 
   @media screen and (min-width: 3840px) {
@@ -369,6 +409,11 @@ export default defineComponent({
 
   &:hover {
     background-image: url("~@assets/icons/pause-hover.svg");
+  }
+
+  @media screen and (min-width: 2560px) {
+    width: 12px;
+    height: 16px;
   }
 
   @media screen and (min-width: 3840px) {

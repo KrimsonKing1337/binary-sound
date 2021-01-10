@@ -67,19 +67,12 @@ export default defineComponent({
     margin-left: 0;
   }
 
+  @media screen and (min-width: 2560px) {
+    max-width: 1093px;
+  }
+
   @media screen and (min-width: 3840px) {
     max-width: 1640px;
   }
-}
-
-.image {
-  height: 600px;
-  width: 820px;
-}
-
-.about {
-  height: 480px;
-  width: 820px;
-  background: #181818;
 }
 </style>

@@ -60,6 +60,10 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+.nav-component {
+  flex-grow: 1;
+}
+
 .nav-items-wrapper {
   display: flex;
   align-items: center;
@@ -126,6 +130,19 @@ export default defineComponent({
 
     &:nth-child(1) {
       margin-top: 0;
+    }
+  }
+
+  @media screen and (min-width: 2560px) {
+    font-size: 18px;
+    height: 65px;
+
+    &:nth-child(1) {
+      margin-left: auto;
+    }
+
+    &:nth-last-child(1) {
+      margin-left: auto;
     }
   }
 

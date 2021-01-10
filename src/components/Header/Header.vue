@@ -29,10 +29,4 @@ export default defineComponent({
     padding: 30px;
   }
 }
-
-.logo {
-  width: 69px;
-  height: 100px;
-  margin-right: 70px;
-}
 </style>

@@ -107,7 +107,7 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 9px;
+  padding: 0 0.5625em;
   height: 41px;
   font-family: Rubik;
   font-size: 16px;

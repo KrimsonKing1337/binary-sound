@@ -214,7 +214,7 @@ export default defineComponent({
   border-top: 2px #888888 solid;
   border-bottom: 2px #888888 solid;
   width: 100%;
-  min-height: 150px;
+  min-height: 130px;
 
   @media screen and (max-width: 1600px) {
     flex-direction: column-reverse;

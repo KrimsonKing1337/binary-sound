@@ -119,6 +119,7 @@ export default defineComponent({
 }
 
 .contacts {
+  margin-top: 42px;
   align-self: flex-start;
 
   @media screen and (max-width: 1600px) {

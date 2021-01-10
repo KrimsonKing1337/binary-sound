@@ -28,7 +28,6 @@ export default defineComponent({
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
   font-size: 16px;
 
   @media screen and (min-width: 2560px) {

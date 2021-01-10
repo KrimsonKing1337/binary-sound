@@ -55,6 +55,10 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     padding: 0 158px 0 148px;
   }
+
+  @media screen and (min-width: 5120px) {
+    padding: 0 198px 0 210px;
+  }
 }
 
 .title {
@@ -73,6 +77,10 @@ export default defineComponent({
 
   @media screen and (min-width: 3840px) {
     font-size: 64px;
+  }
+
+  @media screen and (min-width: 5120px) {
+    font-size: 72px;
   }
 }
 
@@ -99,6 +107,11 @@ export default defineComponent({
     font-size: 32px;
     margin-top: 20px;
   }
+
+  @media screen and (min-width: 5120px) {
+    font-size: 40px;
+    margin-top: 27px;
+  }
 }
 
 .contacts {
@@ -110,6 +123,10 @@ export default defineComponent({
 
   @media screen and (min-width: 3840px) {
     margin-top: 84px;
+  }
+
+  @media screen and (min-width: 5120px) {
+    margin-top: 112px;
   }
 }
 </style>

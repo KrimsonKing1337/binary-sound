@@ -150,6 +150,11 @@ export default defineComponent({
     font-size: 32px;
     height: 82px;
   }
+
+  @media screen and (min-width: 5120px) {
+    font-size: 40px;
+    height: 110px;
+  }
 }
 
 .contacts {

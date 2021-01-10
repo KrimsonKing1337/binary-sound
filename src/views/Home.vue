@@ -74,5 +74,9 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     max-width: 1640px;
   }
+
+  @media screen and (min-width: 5120px) {
+    max-width: 2187px;
+  }
 }
 </style>

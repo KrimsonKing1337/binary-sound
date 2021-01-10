@@ -38,6 +38,10 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     font-size: 32px;
   }
+
+  @media screen and (min-width: 5120px) {
+    font-size: 40px;
+  }
 }
 
 .link {
@@ -70,6 +74,10 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     margin-left: 80px;
   }
+
+  @media screen and (min-width: 5120px) {
+    margin-left: 106px;
+  }
 }
 
 .insta {
@@ -91,6 +99,11 @@ export default defineComponent({
     width: 64px;
     height: 64px;
   }
+
+  @media screen and (min-width: 5120px) {
+    width: 86px;
+    height: 86px;
+  }
 }
 
 .fb {
@@ -111,6 +124,11 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     width: 60px;
     height: 64px;
+  }
+
+  @media screen and (min-width: 5120px) {
+    width: 79px;
+    height: 86px;
   }
 }
 </style>

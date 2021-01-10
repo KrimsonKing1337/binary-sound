@@ -55,6 +55,11 @@ export default defineComponent({
     height: 201px;
   }
 
+  @media screen and (min-width: 5120px) {
+    width: 183px;
+    height: 268px;
+  }
+
   img {
     width: 100%;
   }

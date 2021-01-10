@@ -197,6 +197,10 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     height: 1200px;
   }
+
+  @media screen and (min-width: 5120px) {
+    height: 1600px;
+  }
 }
 
 .control {
@@ -222,6 +226,10 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     min-height: 300px;
   }
+
+  @media screen and (min-width: 5120px) {
+    min-height: 400px;
+  }
 }
 
 .changer {
@@ -243,6 +251,10 @@ export default defineComponent({
 
   @media screen and (min-width: 3840px) {
     width: 658px;
+  }
+
+  @media screen and (min-width: 5120px) {
+    width: 877px;
   }
 }
 
@@ -281,6 +293,12 @@ export default defineComponent({
     height: 120px;
     margin-left: 120px;
   }
+
+  @media screen and (min-width: 5120px) {
+    width: 160px;
+    height: 160px;
+    margin-left: 160px;
+  }
 }
 
 .song {
@@ -309,6 +327,10 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     font-size: 64px;
   }
+
+  @media screen and (min-width: 5120px) {
+    font-size: 72px;
+  }
 }
 
 .song-name {
@@ -323,6 +345,10 @@ export default defineComponent({
 
   @media screen and (min-width: 3840px) {
     font-size: 32px;
+  }
+
+  @media screen and (min-width: 5120px) {
+    font-size: 40px;
   }
 }
 
@@ -340,6 +366,10 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     width: 540px;
   }
+
+  @media screen and (min-width: 5120px) {
+    width: 720px;
+  }
 }
 
 .track-wrapper {
@@ -351,6 +381,11 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     margin-left: 24px;
     height: 4px;
+  }
+
+  @media screen and (min-width: 5120px) {
+    margin-left: 32px;
+    height: 5px;
   }
 }
 
@@ -374,6 +409,10 @@ export default defineComponent({
   }
 
   @media screen and (min-width: 3840px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 5120px) {
     font-size: 24px;
   }
 }
@@ -398,6 +437,11 @@ export default defineComponent({
     width: 18px;
     height: 24px;
   }
+
+  @media screen and (min-width: 5120px) {
+    width: 24px;
+    height: 32px;
+  }
 }
 
 .pause {
@@ -419,6 +463,11 @@ export default defineComponent({
   @media screen and (min-width: 3840px) {
     width: 18px;
     height: 24px;
+  }
+
+  @media screen and (min-width: 5120px) {
+    width: 24px;
+    height: 32px;
   }
 }
 

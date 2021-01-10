@@ -28,12 +28,13 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .sound-design-component {
+  position: relative;
   flex-grow: 1;
 }
 
 .wrapper {
   position: absolute;
-  top: 248px;
+  top: 98px;
   right: 0;
   z-index: 10;
   display: flex;
@@ -44,10 +45,17 @@ export default defineComponent({
 
   @media screen and (min-width: 2560px) {
     padding: 0 187px;
+    top: 131px;
   }
 
   @media screen and (min-width: 3840px) {
     padding: 0 280px;
+    top: 197px;
+  }
+
+  @media screen and (min-width: 5120px) {
+    padding: 0 373px;
+    top: 263px;
   }
 
   @media screen and (max-width: 960px) {
@@ -80,7 +88,15 @@ export default defineComponent({
   text-align: right;
 
   @media screen and (min-width: 2560px) {
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: 3840px) {
     font-size: 64px;
+  }
+
+  @media screen and (min-width: 5120px) {
+    font-size: 72px;
   }
 }
 
@@ -94,7 +110,18 @@ export default defineComponent({
   text-align: right;
 
   @media screen and (min-width: 2560px) {
+    font-size: 20px;
+    margin-top: 13px;
+  }
+
+  @media screen and (min-width: 3840px) {
     font-size: 40px;
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 5120px) {
+    font-size: 40px;
+    margin-top: 27px;
   }
 }
 </style>

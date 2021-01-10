@@ -39,17 +39,18 @@ export default defineComponent({
 .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-grow: 1;
   padding: 0 79px 0 74px;
 
-  @media screen and (max-width: 960px) {
-    padding: 30px;
-  }
-
   @media screen and (max-width: 1600px) {
     padding: 30px 79px 30px 74px;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 960px) {
+    padding: 30px;
   }
 
   @media screen and (min-width: 2560px) {

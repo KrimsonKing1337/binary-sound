@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+img {
+  vertical-align: top;
+}
+
 html,
 body {
   width: 100%;

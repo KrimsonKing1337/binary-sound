@@ -153,7 +153,7 @@ export default defineComponent({
 
   @media screen and (min-width: 5120px) {
     font-size: 40px;
-    height: 110px;
+    height: 90px;
   }
 }
 

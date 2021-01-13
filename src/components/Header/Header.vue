@@ -10,6 +10,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 import Nav from '@/components/Nav';
 import NavMobileHeader from '@/components/NavMobileHeader';
 

@@ -17,10 +17,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import About from '@/components/About/About.vue';
-import Header from '@/components/Header/Header.vue';
-import SoundDesign from '@/components/SoundDesign/SoundDesign.vue';
-import Player from '@/components/Player/Player.vue';
+import About from '@/components/About';
+import Header from '@/components/Header';
+import SoundDesign from '@/components/SoundDesign';
+import Player from '@/components/Player';
 
 export default defineComponent({
   name: 'Home',

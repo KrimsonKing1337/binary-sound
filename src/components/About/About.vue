@@ -19,7 +19,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Contacts from '@/components/Contacts/Contacts.vue';
+
+import Contacts from '@/components/Contacts';
 
 export default defineComponent({
   name: 'Player',

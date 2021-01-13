@@ -72,6 +72,7 @@ export default defineComponent({
 
   @media screen and (max-width: 960px) {
     display: block;
+    transform: translate(-10px);
   }
 }
 

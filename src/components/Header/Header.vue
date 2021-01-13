@@ -1,15 +1,17 @@
 <template>
   <div class="header-component">
-    <NavMobileHeader />
+    <div class="wrapper">
+      <NavMobileHeader />
 
-    <Nav class="nav" />
+      <Nav />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Nav from '@/components/Nav/Nav.vue';
-import NavMobileHeader from '@/components/NavMobileHeader/NavMobileHeader.vue';
+import Nav from '@/components/Nav';
+import NavMobileHeader from '@/components/NavMobileHeader';
 
 export default defineComponent({
   name: 'Header',
@@ -18,7 +20,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.header-component {
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;

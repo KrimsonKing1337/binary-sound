@@ -6,13 +6,13 @@
       <div class="title">
         Саунд-дизайн
         <br />
-        и музыка
+        и&nbsp;музыка
       </div>
 
       <div class="desc">
         для рекламы, трейлеров,
         <br />
-        кино и видеоигр
+        кино и&nbsp;видеоигр
       </div>
     </div>
   </div>
@@ -97,6 +97,12 @@ export default defineComponent({
 
   @media screen and (min-width: 5120px) {
     font-size: 72px;
+  }
+
+  @media screen and (max-width: 960px) {
+    br {
+      display: none;
+    }
   }
 }
 

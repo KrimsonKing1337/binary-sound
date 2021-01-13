@@ -1,10 +1,10 @@
 <template>
   <div class="contacts-component">
-    <a href="#" class="link">
+    <a href="https://www.instagram.com/binary_sound/" class="link">
       <div class="insta" />
     </a>
 
-    <a href="#" class="link">
+    <a href="https://www.facebook.com/binarysoundprod" class="link">
       <div class="fb" />
     </a>
 

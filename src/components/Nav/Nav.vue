@@ -1,43 +1,11 @@
 <template>
   <div class="nav-component">
-    <div class="nav-items-wrapper">
-      <a href="https://www.binary-sound.com/about" class="nav-item">
-        о&nbsp;нас
-      </a>
-
-      <a href="https://www.binary-sound.com/uslugi" class="nav-item">
-        услуги
-      </a>
-
-      <a href="https://www.binary-sound.com/portfolio" class="nav-item">
-        портфолио
-      </a>
-
-      <div class="nav-item is-button">
-        связаться
-      </div>
-    </div>
+    <NavItems class="nav-items-wrapper" />
 
     <div class="nav-mobile" :class="{'is-open': menuIsOpen}">
       <NavMobileHeader />
 
-      <div class="mobile-nav-items-wrapper">
-        <a href="https://www.binary-sound.com/about" class="nav-item">
-          о&nbsp;нас
-        </a>
-
-        <a href="https://www.binary-sound.com/uslugi" class="nav-item">
-          услуги
-        </a>
-
-        <a href="https://www.binary-sound.com/portfolio" class="nav-item">
-          портфолио
-        </a>
-
-        <div class="nav-item is-button">
-          связаться
-        </div>
-      </div>
+      <NavItems class="mobile-nav-items-wrapper" />
 
       <Contacts class="contacts" />
     </div>
@@ -47,12 +15,18 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { mapState } from 'vuex';
-import Contacts from '@/components/Contacts/Contacts.vue';
-import NavMobileHeader from '@/components/NavMobileHeader/NavMobileHeader.vue';
+
+import Contacts from '@/components/Contacts';
+import NavMobileHeader from '@/components/NavMobileHeader';
+import NavItems from './components/NavItems';
 
 export default defineComponent({
   name: 'Nav',
-  components: { NavMobileHeader, Contacts },
+  components: {
+    NavMobileHeader,
+    Contacts,
+    NavItems,
+  },
   computed: {
     ...mapState(['menuIsOpen']),
   },
@@ -101,61 +75,6 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   margin-top: 75px;
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.5625em;
-  height: 41px;
-  font-family: Rubik;
-  font-size: 16px;
-  letter-spacing: 0.1em;
-  color: #FFFFFF;
-  margin-left: 70px;
-  text-decoration: none;
-  cursor: pointer;
-
-  &:nth-child(1) {
-    margin-left: 0;
-  }
-
-  &.is-button {
-    background: linear-gradient(98.21deg, #CD2EDB 0%, #2EDBB1 116.34%);
-  }
-
-  .mobile-nav-items-wrapper & {
-    margin-left: 0;
-    margin-top: 50px;
-
-    &:nth-child(1) {
-      margin-top: 0;
-    }
-  }
-
-  @media screen and (min-width: 2560px) {
-    font-size: 18px;
-    height: 65px;
-
-    &:nth-child(1) {
-      margin-left: auto;
-    }
-
-    &:nth-last-child(1) {
-      margin-left: auto;
-    }
-  }
-
-  @media screen and (min-width: 3840px) {
-    font-size: 32px;
-    height: 82px;
-  }
-
-  @media screen and (min-width: 5120px) {
-    font-size: 40px;
-    height: 90px;
-  }
 }
 
 .contacts {

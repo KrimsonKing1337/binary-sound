@@ -15,7 +15,7 @@
         class="song"
         :class="{'is-active': activeIndex === index}"
       >
-        <audio :src="songCur.src" class="audio" controls />
+        <audio preload="auto" :src="songCur.src" class="audio" controls />
 
         <div class="artist-name">
           {{ songCur.artist }}
@@ -109,6 +109,8 @@ export default defineComponent({
 
           return;
         }
+
+        activeAudioElement.load(); // it's for safari ios
 
         activeAudioElement.addEventListener('canplaythrough', () => {
           resolve(activeAudioElement);

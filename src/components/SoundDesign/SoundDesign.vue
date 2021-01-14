@@ -42,6 +42,7 @@ export default defineComponent({
   align-items: flex-end;
   width: 100%;
   padding: 0 140px;
+  text-align: right;
 
   @media screen and (min-width: 2560px) {
     padding: 0 187px;
@@ -61,8 +62,9 @@ export default defineComponent({
   @media screen and (max-width: 960px) {
     position: static;
     align-items: center;
-    padding: 40px 44px 56px 30px;
+    padding: 40px 20px;
     background: #000;
+    text-align: center;
   }
 }
 
@@ -85,7 +87,6 @@ export default defineComponent({
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(91.04deg, #CD2EDB -2.91%, #2EDBB1 116.13%);
-  text-align: right;
 
   @media screen and (min-width: 2560px) {
     font-size: 40px;
@@ -113,7 +114,6 @@ export default defineComponent({
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-top: 10px;
-  text-align: right;
 
   @media screen and (min-width: 2560px) {
     font-size: 20px;
